@@ -3,52 +3,18 @@
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
-![GitHub stars](https://img.shields.io/github/stars/SpikeySanju/MotionToast?style=social)
-![GitHub forks](https://img.shields.io/github/forks/SpikeySanju/MotionToast?label=Fork&style=social)
-![Repo size](https://img.shields.io/github/repo-size/SpikeySanju/MotionToast?style=social)
-![GitHub follow](https://img.shields.io/github/followers/SpikeySanju?label=Follow&style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/sanjay_spikey?label=Twitter&style=social)
+![GitHub stars](https://img.shields.io/github/stars/chnouman/AwesomeDialog?style=social)
+![GitHub forks](https://img.shields.io/github/forks/chnouman/AwesomeDialog?label=Fork&style=social)
+![Repo size](https://img.shields.io/github/repo-size/chnouman/AwesomeDialog?style=social)
+![GitHub follow](https://img.shields.io/github/followers/chnouman?label=Follow&style=social)
 
 
 A Beautiful Multipurpose Awesome Dialogs Library in Android using Kotlin 😍
 
-![GitHub Cards Preview](https://github.com/Spikeysanju/Video_templates/blob/master/Github%20Card.png)
-
-## Preview - Awesome Dialogs 🌟 
-![gif](https://github.com/Spikeysanju/Video_templates/blob/master/Motion%20Toast.gif)
-
-## Preview - Color Awesome Dialogs 🌈
-![gif](https://github.com/Spikeysanju/Video_templates/blob/master/Toast%20Types-5.png)
-
-## Preview - Dark Dialogs 🌈
-![gif](https://github.com/Spikeysanju/Video_templates/blob/master/Dark%20Toast.png)
-
-## Preview - Dark Color Dialogs 🌈
-![gif](https://github.com/Spikeysanju/Video_templates/blob/master/Dark%20Color%20Toast.png)
-
-
-# Types of Toast Style ❤️
-
-
-<table style="width:100%">
-  <tr>
-    <th>1. Motion Toast </th>
-    <th>2. Color Motion Toast</th> 
-    <th>3. Dark Toast </th>
-    <th>4. Dark Color Toast</th> 
-  </tr>
-  <tr>
-    <td><img src = "https://github.com/Spikeysanju/Video_templates/blob/master/Toast%20Types-3.png"/></td> 
-    <td><img src = "https://github.com/Spikeysanju/Video_templates/blob/master/Toast%20Types-5.png"/></td>
-    <td><img src = "https://github.com/Spikeysanju/Video_templates/blob/master/Dark%20Toast.png"/></td> 
-    <td><img src = "https://github.com/Spikeysanju/Video_templates/blob/master/Dark%20Color%20Toast.png"/></td> 
-   
-  </tr>
-</table>
 
 ## About
 
-A Beautiful Multipurpose Motion Toast Library in Android using Kotlin. 
+A Beautiful Multipurpose Awesome Dialogs Library in Android using Kotlin. 
 
 ## Dependency Project Level
 
@@ -78,20 +44,25 @@ Add dependency in your app module
 	}
 
 ```
-## Five Toast Types 🖐🏼
+## Simple Dialog 🖐🏼
 ```
-        1. TOAST_SUCCESS
-        2. TOAST_ERROR
-        3. TOAST_WARNING
-        4. TOAST_INFO
-        5. TOAST_DELETE
+AwesomeDialog.createDialog(this)
+                .title("Congratulations")
+                .body("Your New Account has been created")
+                .onPositive("Go To My Account") {
+                    Log.d("TAG", "positive ")
+                } 
 ```
 
-## Toast Duration ⌛️ 
+## Dialog With Icon ⌛️ 
 ```
-        1. LONG_DURATION // 4 Seconds
-        2. SHORT_DURATION // 2 Seconds
-       
+AwesomeDialog.createDialog(this)
+		.title("Congratulations")
+                .body("Your New Account has been created")
+		.icon(R.drawable.ic_congrts)
+                .onPositive("Go To My Account") {
+                    Log.d("TAG", "positive ")
+                }       
 ```
 
 ## Usage 
