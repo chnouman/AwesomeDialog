@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val title = "Congratulations"
-        val body = "Your New Account has been created"
+            val body = "Your New Account has been created"
         val goToMyAccount = "Go To My Account"
         val cancel = "Cancel"
         first.setOnClickListener {
