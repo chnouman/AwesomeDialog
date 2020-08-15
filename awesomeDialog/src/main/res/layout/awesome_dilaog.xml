@@ -59,7 +59,7 @@
 
         <TextView
             android:id="@+id/yesButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/triple_margin"
             android:layout_marginStart="@dimen/double_margin"
             android:layout_marginTop="@dimen/single_and_half_margin"
@@ -69,12 +69,16 @@
             android:text="@string/done"
             android:textColor="@android:color/white"
             android:textSize="16sp"
+            android:paddingStart="@dimen/single_margin"
+            android:paddingEnd="@dimen/single_margin"
             android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/subHeading" />
 
         <TextView
             android:id="@+id/noButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/triple_margin"
             android:layout_marginStart="@dimen/double_margin"
             android:layout_marginTop="@dimen/half_margin"
@@ -85,8 +89,12 @@
             android:text="@string/done"
             android:textColor="@android:color/white"
             android:textSize="16sp"
+            android:paddingStart="@dimen/single_margin"
+            android:paddingEnd="@dimen/single_margin"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/yesButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

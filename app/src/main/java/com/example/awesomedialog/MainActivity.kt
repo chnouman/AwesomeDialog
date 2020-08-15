@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val title = "Congratulations"
-            val body = "Your New Account has been created"
+        val body = "Your New Account has been created"
         val goToMyAccount = "Go To My Account"
         val cancel = "Cancel"
         first.setOnClickListener {
@@ -84,12 +84,32 @@ class MainActivity : AppCompatActivity() {
                     body,
                     color = ContextCompat.getColor(this, android.R.color.white)
                 )
-                .background(R.drawable.layout_rounded_dark_black)
-                .onPositive(goToMyAccount) {
+                .background(R.drawable.layout_rounded_green)
+                .onPositive(goToMyAccount, color = R.drawable.layout_rounded_dark_white) {
                     Log.d("TAG", "positive ")
                 }
-                .onNegative(cancel) {
+                .onNegative(cancel, color = R.drawable.layout_rounded_dark_white) {
                     Log.d("TAG", "negative ")
+                }
+        }
+        eighth.setOnClickListener {
+            AwesomeDialog.createDialog(this)
+                .title(
+                    title,
+                    titleColor = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .body(
+                    body,
+                    color = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .icon(R.drawable.ic_congrts)
+                .background(R.drawable.layout_rounded_green)
+                .onPositive(
+                    goToMyAccount,
+                    color = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
+                ) {
+                    Log.d("TAG", "positive ")
                 }
         }
     }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
+import com.example.awesomedialog.AwesomeDialog.Companion.onPositive
 import kotlinx.android.synthetic.main.awesome_dilaog.*
 
 class AwesomeDialog() {
@@ -72,9 +73,17 @@ class AwesomeDialog() {
 
         fun AlertDialog.onPositive(
             text: String,
+            color: Int? = null,
+            textColor: Int? = null,
             action: () -> Unit
         ): AlertDialog {
             this.yesButton.show()
+            if (color != null) {
+                this.yesButton.setBackgroundResource(color)
+            }
+            if (textColor != null) {
+                this.yesButton.setTextColor(textColor)
+            }
             this.yesButton.text = text.trim()
             this.yesButton.setOnClickListener {
                 action.invoke()
@@ -85,10 +94,18 @@ class AwesomeDialog() {
 
         fun AlertDialog.onNegative(
             text: String,
+            color: Int? = null,
+            textColor: Int? = null,
             action: () -> Unit
         ): AlertDialog {
             this.noButton.show()
             this.noButton.text = text.trim()
+            if (textColor != null) {
+                this.noButton.setTextColor(textColor)
+            }
+            if (color != null) {
+                this.noButton.setBackgroundResource(color)
+            }
             this.noButton.setOnClickListener {
                 action.invoke()
                 dismiss()
