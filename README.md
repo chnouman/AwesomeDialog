@@ -151,6 +151,30 @@ AwesomeDialog.createDialog(this)
                 
 ```
 
+### Custom Coloring 🌈
+```
+  AwesomeDialog.createDialog(this)
+                .title(
+                    title,
+                    titleColor = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .body(
+                    body,
+                    color = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .icon(R.drawable.ic_congrts)
+                .background(R.drawable.layout_rounded_green)
+                .onPositive(
+                    goToMyAccount,
+                    color = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
+                ) {
+                    Log.d("TAG", "positive ")
+                }                
+```
+### Output
+![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597510833.png)
+
 
 ## License
 ```
