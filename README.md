@@ -67,218 +67,91 @@ AwesomeDialog.createDialog(this)
 
 ## Usage 
 
-# Sample Code for - Motion Toast 🌟 
+# Sample Code for 🌟 
 
-### Success Toast
+### Icon+Title+Body
 ```
- MotionToast.createToast(this,"Upload Completed!",
-                MotionToast.TOAST_SUCCESS,
-                MotionToast.GRAVITY_BOTTOM,
-                MotionToast.LONG_DURATION,
-                ResourcesCompat.getFont(this,R.font.helvetica_regular))
-                
+AwesomeDialog.createDialog(this)
+                .title(title)
+                .body(body)
+                .icon(R.drawable.ic_congrts)                
 ```
 
-### Error Toast
+### Icon+Title+Body+ (+ Button)
 ```
- MotionToast.createToast(this,"Profile Update Failed!",
-                    MotionToast.TOAST_ERROR,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
+   AwesomeDialog.createDialog(this)
+                .title(title)
+                .body(body)
+                .icon(R.drawable.ic_congrts)
+                .onPositive(goToMyAccount) {
+                    Log.d("TAG", "positive ")
+                }
 ```
-### Warning Toast
+### Icon+Title+Body+ (+/- Button)
 ```
-MotionToast.createToast(this,"Please fill all the details!",
-                    MotionToast.TOAST_WARNING,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
+AwesomeDialog.createDialog(this)
+                .title(title)
+                .body(body)
+                .icon(R.drawable.ic_congrts)
+                .onPositive(goToMyAccount) {
+                    Log.d("TAG", "positive ")
+                }
+                .onNegative(cancel) {
+                    Log.d("TAG", "negative ")
+                }
         
 ```
 
-### Info Toast
+### Title+Body+ (- Button)
 ```
-       MotionToast.createToast(this,"This is information toast!",
-                    MotionToast.TOAST_INFO,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
+AwesomeDialog.createDialog(this)
+                .title(title)
+                .body(body)
+                .onPositive(goToMyAccount) {
+                    Log.d("TAG", "positive ")
+                }
+```
+### Title+Body+ (+/- Button)
+```
+       AwesomeDialog.createDialog(this)
+                .title(title)
+                .body(body)
+                .onPositive(goToMyAccount) {
+                    Log.d("TAG", "positive ")
+                }
+                .onNegative(cancel) {
+                    Log.d("TAG", "negative ")
+                }  
 
 ```
-### Delete Toast
-```
-       MotionToast.createToast(this,"Delete all history!",
-                    MotionToast.TOAST_DELETE,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
 
+### Title+Body+ (+/- Button) With Backgroud 🌈
 ```
-
-# Sample Code for - Color Motion Toast 🌈
-
-### Success Toast
-```
- MotionToast.createColorToast(this,"Upload Completed!",
-                MotionToast.TOAST_SUCCESS,
-                MotionToast.GRAVITY_BOTTOM,
-                MotionToast.LONG_DURATION,
-                ResourcesCompat.getFont(this,R.font.helvetica_regular))
+  AwesomeDialog.createDialog(this)
+                .title(
+                    title,
+                    titleColor = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .body(
+                    body,
+                    color = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .background(R.drawable.layout_rounded_dark_black)
+                .onPositive(goToMyAccount) {
+                    Log.d("TAG", "positive ")
+                }
+                .onNegative(cancel) {
+                    Log.d("TAG", "negative ")
+                }
                 
 ```
-
-### Error Toast
-```
- MotionToast.createColorToast(this,"Profile Update Failed!",
-                    MotionToast.TOAST_ERROR,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-```
-### Warning Toast
-```
-MotionToast.createColorToast(this,"Please fill all the details!",
-                    MotionToast.TOAST_WARNING,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-        
-```
-
-### Info Toast
-```
-       MotionToast.createColorToast(this,"This is information toast!",
-                    MotionToast.TOAST_INFO,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-### Delete Toast
-```
-       MotionToast.createColorToast(this,"Delete all history!",
-                    MotionToast.TOAST_DELETE,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-
-# Sample Code for - Dark Toast 🌚🖤 
-
-### Success Toast
-```
- MotionToast.darkToast(this,"Upload Completed!",
-                MotionToast.TOAST_SUCCESS,
-                MotionToast.GRAVITY_BOTTOM,
-                MotionToast.LONG_DURATION,
-                ResourcesCompat.getFont(this,R.font.helvetica_regular))
-                
-```
-
-### Error Toast
-```
- MotionToast.darkToast(this,"Profile Update Failed!",
-                    MotionToast.TOAST_ERROR,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-```
-### Warning Toast
-```
-MotionToast.darkToast(this,"Please fill all the details!",
-                    MotionToast.TOAST_WARNING,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-        
-```
-
-### Info Toast
-```
-       MotionToast.darkToast(this,"This is information toast!",
-                    MotionToast.TOAST_INFO,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-### Delete Toast
-```
-       MotionToast.darkToast(this,"Delete all history!",
-                    MotionToast.TOAST_DELETE,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-
-# Sample Code for - Dark Color Toast 🌚🖤🌈
-
-### Success Toast
-```
- MotionToast.darkColorToast(this,"Upload Completed!",
-                MotionToast.TOAST_SUCCESS,
-                MotionToast.GRAVITY_BOTTOM,
-                MotionToast.LONG_DURATION,
-                ResourcesCompat.getFont(this,R.font.helvetica_regular))
-                
-```
-
-### Error Toast
-```
- MotionToast.darkColorToast(this,"Profile Update Failed!",
-                    MotionToast.TOAST_ERROR,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-```
-### Warning Toast
-```
-MotionToast.darkColorToast(this,"Please fill all the details!",
-                    MotionToast.TOAST_WARNING,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-        
-```
-
-### Info Toast
-```
-       MotionToast.darkColorToast(this,"This is information toast!",
-                    MotionToast.TOAST_INFO,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-### Delete Toast
-```
-       MotionToast.darkColorToast(this,"Delete all history!",
-                    MotionToast.TOAST_DELETE,
-                    MotionToast.GRAVITY_BOTTOM,
-                    MotionToast.LONG_DURATION,
-                    ResourcesCompat.getFont(this,R.font.helvetica_regular))  
-
-```
-
-
-# Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/paypalme2/spikeysanju)
 
 
 ## License
 ```
 
 
-    Copyright 2020 Spikey sanju
+    Copyright 2020 Muhammad Nouman
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
