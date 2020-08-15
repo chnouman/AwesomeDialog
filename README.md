@@ -83,7 +83,7 @@ AwesomeDialog.createDialog(this)
 ```
 
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499141.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499149.png" width="250px" />
 
 
 
@@ -99,7 +99,7 @@ AwesomeDialog.createDialog(this)
 ```
 
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499149.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499156.png" width="250px" />
 
 
 
@@ -119,7 +119,7 @@ AwesomeDialog.createDialog(this)
 ```
 
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499156.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499160.png" width="250px" />
 
 
 
@@ -134,7 +134,7 @@ AwesomeDialog.createDialog(this)
 ```
 
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499160.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499169.png" width="250px" />
 
 
 
@@ -153,7 +153,7 @@ AwesomeDialog.createDialog(this)
 ```
 
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499169.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499173.png" width="250px" />
 
 
 ### Title+Body+ (+/- Button) With Backgroud 🌈
@@ -177,7 +177,7 @@ AwesomeDialog.createDialog(this)
                 
 ```
 ### Output
-<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499173.png" width="250px" />
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499179.png" width="250px" />
 
 
 ### Custom Coloring 🌈
