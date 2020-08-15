@@ -173,7 +173,7 @@ AwesomeDialog.createDialog(this)
                 }                
 ```
 ### Output
-![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597510833.png)
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597510833.png" width="250px" />
 
 
 ## License
