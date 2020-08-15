@@ -11,23 +11,26 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:paddingBottom="@dimen/single_margin"
         android:layout_marginBottom="25dp"
         android:background="@drawable/layout_rounded_white">
 
 
         <ImageView
-            android:id="@+id/ic_fingerprint"
+            android:id="@+id/image"
             android:layout_width="51dp"
             android:layout_height="51dp"
             android:layout_marginTop="34dp"
             app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_congrts" />
 
         <TextView
-            android:id="@+id/tv_fingerprint_message"
+            android:id="@+id/title"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/ten_dp"
@@ -36,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ic_fingerprint" />
+            app:layout_constraintTop_toBottomOf="@+id/image" />
 
         <TextView
             android:id="@+id/subHeading"
@@ -48,10 +51,11 @@
             android:gravity="center_horizontal"
             android:text="@string/success_body"
             android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_fingerprint_message" />
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
             android:id="@+id/yesButton"
@@ -59,14 +63,30 @@
             android:layout_height="@dimen/triple_margin"
             android:layout_marginStart="@dimen/double_margin"
             android:layout_marginTop="44dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/double_margin"
+            android:background="@drawable/layout_rounded_dark_black"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/subHeading" />
+
+        <TextView
+            android:id="@+id/noButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/triple_margin"
+            android:layout_marginStart="@dimen/double_margin"
+            android:layout_marginTop="@dimen/half_margin"
             android:layout_marginEnd="@dimen/double_margin"
             android:layout_marginBottom="@dimen/single_and_half_margin"
             android:background="@drawable/layout_rounded_dark_black"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/done"
             android:textColor="@android:color/white"
+            android:visibility="gone"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subHeading" />
+            app:layout_constraintTop_toBottomOf="@id/yesButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

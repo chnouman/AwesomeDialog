@@ -3,11 +3,13 @@ package com.example.awesomedialog
 import android.app.Activity
 import android.graphics.Typeface
 import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.content.ContextCompat
+import android.view.View
+import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
+import com.example.awesomedialog.AwesomeDialog.Companion.icon
+import kotlinx.android.synthetic.main.awesome_dilaog.*
 
-class AwesomeDialog {
+class AwesomeDialog() {
 
     companion object {
 
@@ -28,25 +30,88 @@ class AwesomeDialog {
 
         private lateinit var layoutInflater: LayoutInflater
 
+        fun AlertDialog.body(
+            body: String,
+            fontStyle: Typeface? = null,
+            color: Int = 0
+        ): AlertDialog {
+            this.subHeading.text = body.trim()
+            this.subHeading.show()
+            if (fontStyle != null) {
+                this.subHeading.typeface = fontStyle
+            }
+            if (color != 0) {
+                this.subHeading.setTextColor(color)
+            }
+            return this
+        }
+
+        fun AlertDialog.title(
+            title: String,
+            fontStyle: Typeface? = null,
+            color: Int = 0
+        ): AlertDialog {
+            this.title.text = title.trim()
+            this.title.show()
+            if (fontStyle != null) {
+                this.title.typeface = fontStyle
+            }
+            if (color != 0) {
+                this.title.setTextColor(color)
+            }
+            return this
+        }
+
+        fun AlertDialog.icon(
+            icon: Int
+        ): AlertDialog {
+            this.image.setImageResource(icon)
+            this.image.show()
+            return this
+        }
+
+        fun AlertDialog.onPositive(
+            text: String,
+            action: () -> Unit
+        ): AlertDialog {
+            this.yesButton.show()
+            this.yesButton.text = text.trim()
+            this.yesButton.setOnClickListener {
+                action.invoke()
+                dismiss()
+            }
+            return this
+        }
+
+        fun AlertDialog.onNegative(
+            text: String,
+            action: () -> Unit
+        ): AlertDialog {
+            this.noButton.show()
+            this.noButton.text = text.trim()
+            this.noButton.setOnClickListener {
+                action.invoke()
+                dismiss()
+            }
+            return this
+        }
 
         // all toast CTA
         fun createDialog(
-            context: Activity,
-            message: String,
-            style: String,
-            position: Int,
-            duration: Int
-        ) {
+            context: Activity
+        ): AlertDialog {
             layoutInflater = LayoutInflater.from(context)
             val alertDialog =
                 androidx.appcompat.app.AlertDialog.Builder(
-                    context,  R.style.full_screen_dialog
+                    context, R.style.full_screen_dialog
                 )
                     .setView(R.layout.awesome_dilaog)
             val alert: androidx.appcompat.app.AlertDialog = alertDialog.create()
             // Let's start with animation work. We just need to create a style and use it here as follows.
 //            alert.window?.attributes?.windowAnimations = R.style.SlidingDialogAnimation
+//            alert.show()
             alert.show()
+            return alert
 /*            alert.subHeading.text = getString(R.string.payoneer_linked)
             alert.yesButton.text = getString(R.string.go_to_my_account)
             alert.yesButton.setOnClickListener() {
@@ -1700,4 +1765,8 @@ class AwesomeDialog {
         }
     }*/
     }
+}
+
+private fun View.show() {
+    this.visibility = View.VISIBLE
 }
