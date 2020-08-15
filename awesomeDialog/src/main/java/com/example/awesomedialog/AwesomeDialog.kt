@@ -2,8 +2,10 @@ package com.example.awesomedialog
 
 import android.app.Activity
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.awesome_dilaog.*
 
@@ -12,6 +14,31 @@ class AwesomeDialog() {
     companion object {
 
         private lateinit var layoutInflater: LayoutInflater
+
+        fun AlertDialog.title(
+            title: String,
+            fontStyle: Typeface? = null,
+            titleColor: Int = 0
+        ): AlertDialog {
+            this.title.text = title.trim()
+            if (fontStyle != null) {
+                this.title.typeface = fontStyle
+            }
+            if (titleColor != 0) {
+                this.title.setTextColor(titleColor)
+            }
+            this.title.show()
+            return this
+        }
+
+        fun AlertDialog.background(
+            color: Int? = null
+        ): AlertDialog {
+            if (color != null) {
+                this.mainLayout.setBackgroundResource(color)
+            }
+            return this
+        }
 
         fun AlertDialog.body(
             body: String,
@@ -29,27 +56,17 @@ class AwesomeDialog() {
             return this
         }
 
-        fun AlertDialog.title(
-            title: String,
-            fontStyle: Typeface? = null,
-            color: Int = 0
-        ): AlertDialog {
-            this.title.text = title.trim()
-            this.title.show()
-            if (fontStyle != null) {
-                this.title.typeface = fontStyle
-            }
-            if (color != 0) {
-                this.title.setTextColor(color)
-            }
-            return this
-        }
-
         fun AlertDialog.icon(
-            icon: Int
+            icon: Int,
+            animateIcon: Boolean = false
         ): AlertDialog {
             this.image.setImageResource(icon)
             this.image.show()
+            // Pulse Animation for Icon
+            if (animateIcon) {
+                val pulseAnimation = AnimationUtils.loadAnimation(context, R.anim.pulse)
+                image.startAnimation(pulseAnimation)
+            }
             return this
         }
 
@@ -85,38 +102,17 @@ class AwesomeDialog() {
         ): AlertDialog {
             layoutInflater = LayoutInflater.from(context)
             val alertDialog =
-                androidx.appcompat.app.AlertDialog.Builder(
+                AlertDialog.Builder(
                     context, R.style.full_screen_dialog
                 )
                     .setView(R.layout.awesome_dilaog)
-            val alert: androidx.appcompat.app.AlertDialog = alertDialog.create()
+            val alert: AlertDialog = alertDialog.create()
             // Let's start with animation work. We just need to create a style and use it here as follows.
 //            alert.window?.attributes?.windowAnimations = R.style.SlidingDialogAnimation
-//            alert.show()
             alert.show()
             return alert
-/*            alert.subHeading.text = getString(R.string.payoneer_linked)
-            alert.yesButton.text = getString(R.string.go_to_my_account)
-            alert.yesButton.setOnClickListener() {
-                (context as AppCompatActivity).finish()
-            }*/
 
-            /*    layout.custom_toast_image.setImageDrawable(
-                ContextCompat.getDrawable(
-                    context,
-                    R.drawable.ic_check_green
-                )
-            )
-
-            when (style) {
-                // Function for Toast Success
-                TOAST_SUCCESS -> {
-                    layout.custom_toast_image.setImageDrawable(
-                        ContextCompat.getDrawable(
-                            context,
-                            R.drawable.ic_check_green
-                        )
-                    )
+/*
 
                     // Pulse Animation for Icon
                     val pulseAnimation = AnimationUtils.loadAnimation(context, R.anim.pulse)
@@ -504,7 +500,6 @@ class AwesomeDialog() {
 
 
             }*/
-
         }
 
         /*   // all color toast CTA
