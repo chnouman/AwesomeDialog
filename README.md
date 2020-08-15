@@ -13,9 +13,9 @@ A Beautiful Multipurpose Awesome Dialogs Library in Android using Kotlin 😍
 
 ---
 
-![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/first.jpg)
+![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/first.PNG)
 
-![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/second.jpg)
+![Showcase](https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/second.PNG)
 
 ## About
 
