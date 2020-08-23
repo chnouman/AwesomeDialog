@@ -225,6 +225,8 @@ title | String | Empty String
 fontStyle |  TypeFace | Android Default
 titleColor | Int | Android Default Color
 
+
+
 #body()
 Parameter | Type | Default Value
 --- | --- | --- | ---
