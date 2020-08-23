@@ -12,6 +12,7 @@ import com.example.awesomedialog.AwesomeDialog.Companion.body
 import com.example.awesomedialog.AwesomeDialog.Companion.icon
 import com.example.awesomedialog.AwesomeDialog.Companion.onNegative
 import com.example.awesomedialog.AwesomeDialog.Companion.onPositive
+import com.example.awesomedialog.AwesomeDialog.Companion.position
 import com.example.awesomedialog.AwesomeDialog.Companion.title
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -85,10 +86,13 @@ class MainActivity : AppCompatActivity() {
                     color = ContextCompat.getColor(this, android.R.color.white)
                 )
                 .background(R.drawable.layout_rounded_green)
-                .onPositive(goToMyAccount, color = R.drawable.layout_rounded_dark_white) {
+                .onPositive(goToMyAccount, color = R.drawable.layout_rounded_dark_white
+                    ,textColor =ContextCompat.getColor(this, android.R.color.black) ) {
                     Log.d("TAG", "positive ")
                 }
-                .onNegative(cancel, color = R.drawable.layout_rounded_dark_white) {
+                .onNegative(cancel, color = R.drawable.layout_rounded_dark_white
+                    ,textColor =ContextCompat.getColor(this, android.R.color.black)
+                ) {
                     Log.d("TAG", "negative ")
                 }
         }
@@ -104,6 +108,27 @@ class MainActivity : AppCompatActivity() {
                 )
                 .icon(R.drawable.ic_congrts)
                 .background(R.drawable.layout_rounded_green)
+                .onPositive(
+                    goToMyAccount,
+                    color = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
+                ) {
+                    Log.d("TAG", "positive ")
+                }
+        }
+        nine.setOnClickListener {
+            AwesomeDialog.createDialog(this)
+                .title(
+                    title,
+                    titleColor = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .body(
+                    body,
+                    color = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .icon(R.drawable.ic_congrts)
+                .background(R.drawable.layout_rounded_green)
+                .position(AwesomeDialog.POSITIONS.CENTER)
                 .onPositive(
                     goToMyAccount,
                     color = R.drawable.layout_rounded_dark_white,

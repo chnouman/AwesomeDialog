@@ -81,6 +81,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sixth" />
+
         <Button
             android:id="@+id/eighth"
             android:layout_width="0dp"
@@ -90,5 +91,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/seventh" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="Center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eighth" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
