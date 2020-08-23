@@ -213,8 +213,8 @@ POSITIONS.BOTTOM
 By Default Position is Bottom.
 
 | CENTER | BOTTOM
-| :---------------: | :---------------: | :---------------: | :---------------: |
-| <img src="https://github.com/chnouman/AwesomeDialog/blob/master/art/center.gif" align="center" width="100%"/> | <img src="https://user-images.githubusercontent.com/24237865/71888722-14a4a500-3184-11ea-9142-e5a594fc6909.gif" align="center" width="100%"/>
+| :---------------: | :---------------: | 
+| <img src="https://github.com/chnouman/AwesomeDialog/blob/master/art/center.gif" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/24237865/71888722-14a4a500-3184-11ea-9142-e5a594fc6909.gif" align="center" width="50%"/>
 
 ## License
 ```
