@@ -228,11 +228,10 @@ titleColor | Int | Android Default Color
 
 
 #body()
-Parameter | Type | Default Value
---- | --- | --- | ---
-body |  String | Empty String
-fontStyle | Typeface | Android Default
-color | Int | Android Default Text Color
+Parameter | Type | Default Value.
+body      |  String | Empty String.
+fontStyle | Typeface | Android Default.
+color | Int | Android Default Text Color.
 
 #icon()
 Parameter | Type | Default Value
