@@ -37,10 +37,10 @@ class AwesomeDialog() {
         }
 
         fun AlertDialog.background(
-            color: Int? = null
+            dialogBackgroundColor: Int? = null
         ): AlertDialog {
-            if (color != null) {
-                this.mainLayout.setBackgroundResource(color)
+            if (dialogBackgroundColor != null) {
+                this.mainLayout.setBackgroundResource(dialogBackgroundColor)
             }
             return this
         }
@@ -90,20 +90,20 @@ class AwesomeDialog() {
 
         fun AlertDialog.onPositive(
             text: String,
-            color: Int? = null,
+            buttonBackgroundColor: Int? = null,
             textColor: Int? = null,
-            action: () -> Unit
+            action: (() -> Unit)? = null
         ): AlertDialog {
             this.yesButton.show()
-            if (color != null) {
-                this.yesButton.setBackgroundResource(color)
+            if (buttonBackgroundColor != null) {
+                this.yesButton.setBackgroundResource(buttonBackgroundColor)
             }
             if (textColor != null) {
                 this.yesButton.setTextColor(textColor)
             }
             this.yesButton.text = text.trim()
             this.yesButton.setOnClickListener {
-                action.invoke()
+                action?.invoke()
                 dismiss()
             }
             return this
@@ -111,20 +111,20 @@ class AwesomeDialog() {
 
         fun AlertDialog.onNegative(
             text: String,
-            color: Int? = null,
+            buttonBackgroundColor: Int? = null,
             textColor: Int? = null,
-            action: () -> Unit
+            action: (() -> Unit)? = null
         ): AlertDialog {
             this.noButton.show()
             this.noButton.text = text.trim()
             if (textColor != null) {
                 this.noButton.setTextColor(textColor)
             }
-            if (color != null) {
-                this.noButton.setBackgroundResource(color)
+            if (buttonBackgroundColor != null) {
+                this.noButton.setBackgroundResource(buttonBackgroundColor)
             }
             this.noButton.setOnClickListener {
-                action.invoke()
+                action?.invoke()
                 dismiss()
             }
             return this

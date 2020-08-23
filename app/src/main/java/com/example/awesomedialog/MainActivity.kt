@@ -1,10 +1,7 @@
 package com.example.awesomedialog
 
-import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import androidx.core.content.ContextCompat
 import com.example.awesomedialog.AwesomeDialog.Companion.background
@@ -86,12 +83,12 @@ class MainActivity : AppCompatActivity() {
                     color = ContextCompat.getColor(this, android.R.color.white)
                 )
                 .background(R.drawable.layout_rounded_green)
-                .onPositive(goToMyAccount, color = R.drawable.layout_rounded_dark_white
-                    ,textColor =ContextCompat.getColor(this, android.R.color.black) ) {
+                .onPositive(goToMyAccount, buttonBackgroundColor = R.drawable.layout_rounded_dark_white
+                    , textColor =ContextCompat.getColor(this, android.R.color.black) ) {
                     Log.d("TAG", "positive ")
                 }
-                .onNegative(cancel, color = R.drawable.layout_rounded_dark_white
-                    ,textColor =ContextCompat.getColor(this, android.R.color.black)
+                .onNegative(cancel, buttonBackgroundColor = R.drawable.layout_rounded_dark_white
+                    , textColor =ContextCompat.getColor(this, android.R.color.black)
                 ) {
                     Log.d("TAG", "negative ")
                 }
@@ -110,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                 .background(R.drawable.layout_rounded_green)
                 .onPositive(
                     goToMyAccount,
-                    color = R.drawable.layout_rounded_dark_white,
+                    buttonBackgroundColor = R.drawable.layout_rounded_dark_white,
                     textColor = ContextCompat.getColor(this, android.R.color.black)
                 ) {
                     Log.d("TAG", "positive ")
@@ -131,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                 .position(AwesomeDialog.POSITIONS.CENTER)
                 .onPositive(
                     goToMyAccount,
-                    color = R.drawable.layout_rounded_dark_white,
+                    buttonBackgroundColor = R.drawable.layout_rounded_dark_white,
                     textColor = ContextCompat.getColor(this, android.R.color.black)
                 ) {
                     Log.d("TAG", "positive ")
