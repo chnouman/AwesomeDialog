@@ -195,7 +195,7 @@ AwesomeDialog.build(this)
                 .background(R.drawable.layout_rounded_green)
                 .onPositive(
                     goToMyAccount,
-                    color = R.drawable.layout_rounded_dark_white,
+                    buttonBackgroundColor = R.drawable.layout_rounded_dark_white,
                     textColor = ContextCompat.getColor(this, android.R.color.black)
                 ) {
                     Log.d("TAG", "positive ")
