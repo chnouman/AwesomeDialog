@@ -45,7 +45,7 @@ Add dependency in your app module
 
 ```
 	dependencies {
-	        implementation 'com.github.chnouman:AwesomeDialog:v1.0.0'
+	        implementation 'com.github.chnouman:AwesomeDialog:1.0.4'
 	}
 
 ```
