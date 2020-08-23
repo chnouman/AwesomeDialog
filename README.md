@@ -216,6 +216,56 @@ By Default Position is Bottom.
 | :---------------: | :---------------: | 
 | <img src="https://github.com/chnouman/AwesomeDialog/blob/master/art/center.gif" align="center" width="25%"/> | <img src="https://github.com/chnouman/AwesomeDialog/blob/master/art/bottom_dialog.gif" align="center" width="25%"/>
 
+
+## Awesome Attributes Properties
+#title()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+title | String | Empty String
+fontStyle |  TypeFace | Android Default
+titleColor | Int | Android Default Color
+
+#body()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+body |  String | Empty String
+fontStyle | Typeface | Android Default
+color | Int | Android Default Text Color
+
+#icon()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+icon |  Int | Not Null
+animateIcon | Boolean | false
+
+
+#position()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+position |  POSITIONS | POSITIONS.BOTTOM
+
+#background()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+dialogBackgroundColor |  INT | DEFAULT
+
+#onPositive()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+text |  String | Empty String
+buttonBackgroundColor | Int | Default Color
+action | () -> Unit | Empty
+
+#onNegative()
+Parameter | Type | Default Value
+--- | --- | --- | ---
+text |  String | Empty String
+buttonBackgroundColor | Int | Default Color
+action | () -> Unit | Empty
+
+
+
+
 ## License
 ```
 
