@@ -4,13 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.content.ContextCompat
-import com.example.awesomedialog.AwesomeDialog.Companion.background
-import com.example.awesomedialog.AwesomeDialog.Companion.body
-import com.example.awesomedialog.AwesomeDialog.Companion.icon
-import com.example.awesomedialog.AwesomeDialog.Companion.onNegative
-import com.example.awesomedialog.AwesomeDialog.Companion.onPositive
-import com.example.awesomedialog.AwesomeDialog.Companion.position
-import com.example.awesomedialog.AwesomeDialog.Companion.title
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
