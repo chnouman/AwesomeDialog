@@ -218,7 +218,7 @@ By Default Position is Bottom.
 
 
 ## Awesome Attributes Properties
-#title()
+## title()
 Parameter | Type | Default Value
 --- | --- | --- |
 title | String | Empty String
@@ -227,39 +227,40 @@ titleColor | Int | Android Default Color
 
 
 
-#body()
+## body()
 Parameter | Type | Default Value.
+--- | --- | --- |
 body      |  String | Empty String.
 fontStyle | Typeface | Android Default.
 color | Int | Android Default Text Color.
 
-#icon()
+## icon()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- |
 icon |  Int | Not Null
 animateIcon | Boolean | false
 
 
-#position()
+## position()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- | 
 position |  POSITIONS | POSITIONS.BOTTOM
 
-#background()
+## background()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- |
 dialogBackgroundColor |  INT | DEFAULT
 
-#onPositive()
+## onPositive()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- | 
 text |  String | Empty String
 buttonBackgroundColor | Int | Default Color
 action | () -> Unit | Empty
 
-#onNegative()
+## onNegative()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- |
 text |  String | Empty String
 buttonBackgroundColor | Int | Default Color
 action | () -> Unit | Empty
