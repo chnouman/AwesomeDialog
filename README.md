@@ -51,7 +51,7 @@ Add dependency in your app module
 ```
 ## Simple Dialog 🖐🏼
 ```
-AwesomeDialog.createDialog(this)
+AwesomeDialog.build(this)
                 .title("Congratulations")
                 .body("Your New Account has been created")
                 .onPositive("Go To My Account") {
@@ -61,7 +61,7 @@ AwesomeDialog.createDialog(this)
 
 ## Dialog With Icon ⌛️ 
 ```
-AwesomeDialog.createDialog(this)
+AwesomeDialog.build(this)
 		.title("Congratulations")
                 .body("Your New Account has been created")
 		.icon(R.drawable.ic_congrts)
@@ -76,7 +76,7 @@ AwesomeDialog.createDialog(this)
 
 ### Icon+Title+Body
 ```
-AwesomeDialog.createDialog(this)
+AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)                
@@ -89,7 +89,7 @@ AwesomeDialog.createDialog(this)
 
 ### Icon+Title+Body+ (+ Button)
 ```
-   AwesomeDialog.createDialog(this)
+   AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)
@@ -105,7 +105,7 @@ AwesomeDialog.createDialog(this)
 
 ### Icon+Title+Body+ (+/- Button)
 ```
-AwesomeDialog.createDialog(this)
+AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)
@@ -125,7 +125,7 @@ AwesomeDialog.createDialog(this)
 
 ### Title+Body+ (- Button)
 ```
-AwesomeDialog.createDialog(this)
+AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .onPositive(goToMyAccount) {
@@ -140,7 +140,7 @@ AwesomeDialog.createDialog(this)
 
 ### Title+Body+ (+/- Button)
 ```
-       AwesomeDialog.createDialog(this)
+       AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .onPositive(goToMyAccount) {
@@ -158,7 +158,7 @@ AwesomeDialog.createDialog(this)
 
 ### Title+Body+ (+/- Button) With Backgroud 🌈
 ```
-  AwesomeDialog.createDialog(this)
+  AwesomeDialog.build(this)
                 .title(
                     title,
                     titleColor = ContextCompat.getColor(this, android.R.color.white)
@@ -182,7 +182,7 @@ AwesomeDialog.createDialog(this)
 
 ### Custom Coloring 🌈
 ```
-  AwesomeDialog.createDialog(this)
+  AwesomeDialog.build(this)
                 .title(
                     title,
                     titleColor = ContextCompat.getColor(this, android.R.color.white)
