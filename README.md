@@ -220,7 +220,7 @@ By Default Position is Bottom.
 ## Awesome Attributes Properties
 #title()
 Parameter | Type | Default Value
---- | --- | --- | ---
+--- | --- | --- |
 title | String | Empty String
 fontStyle |  TypeFace | Android Default
 titleColor | Int | Android Default Color
