@@ -1,7 +1,7 @@
 # Awesome Dialog - A Beautiful Dialogs Library for Android Kotlin 🤩🔥 
 
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
+[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
 ![GitHub stars](https://img.shields.io/github/stars/chnouman/AwesomeDialog?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/chnouman/AwesomeDialog?label=Fork&style=social)
@@ -45,7 +45,7 @@ Add dependency in your app module
 
 ```
 	dependencies {
-	        implementation 'com.github.chnouman:AwesomeDialog:1.0.3'
+	        implementation 'com.github.chnouman:AwesomeDialog:v1.0.0'
 	}
 
 ```
