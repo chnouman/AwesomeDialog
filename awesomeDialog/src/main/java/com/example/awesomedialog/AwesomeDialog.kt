@@ -10,8 +10,11 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.awesome_dilaog.*
 
 
-class AwesomeDialog() {
+class AwesomeDialog {
 
+    /***
+     * Positions For Alert Dialog
+     * */
     enum class POSITIONS {
         CENTER, BOTTOM
     }
@@ -20,6 +23,9 @@ class AwesomeDialog() {
 
         private lateinit var layoutInflater: LayoutInflater
 
+        /***
+         * Title Properties For Alert Dialog
+         * */
         fun AlertDialog.title(
             title: String,
             fontStyle: Typeface? = null,
@@ -36,6 +42,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * Dialog Background properties For Alert Dialog
+         * */
         fun AlertDialog.background(
             dialogBackgroundColor: Int? = null
         ): AlertDialog {
@@ -45,6 +54,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * Positions of Alert Dialog
+         * */
         fun AlertDialog.position(
             position: POSITIONS = POSITIONS.BOTTOM
         ): AlertDialog {
@@ -58,6 +70,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * Sub Title or Body of Alert Dialog
+         * */
         fun AlertDialog.body(
             body: String,
             fontStyle: Typeface? = null,
@@ -74,6 +89,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * Icon of  Alert Dialog
+         * */
         fun AlertDialog.icon(
             icon: Int,
             animateIcon: Boolean = false
@@ -88,6 +106,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * onPositive Button Properties For Alert Dialog
+         * */
         fun AlertDialog.onPositive(
             text: String,
             buttonBackgroundColor: Int? = null,
@@ -109,6 +130,9 @@ class AwesomeDialog() {
             return this
         }
 
+        /***
+         * onNegative Button Properties For Alert Dialog
+         * */
         fun AlertDialog.onNegative(
             text: String,
             buttonBackgroundColor: Int? = null,
@@ -130,7 +154,10 @@ class AwesomeDialog() {
             return this
         }
 
-        fun createDialog(
+        /***
+         * core method For Alert Dialog
+         * */
+        fun build(
             context: Activity
         ): AlertDialog {
             layoutInflater = LayoutInflater.from(context)
@@ -141,12 +168,11 @@ class AwesomeDialog() {
                     .setView(R.layout.awesome_dilaog)
             val alert: AlertDialog = alertDialog.create()
             // Let's start with animation work. We just need to create a style and use it here as follows.
+            //Pop In and Pop Out Animation yet pending
 //            alert.window?.attributes?.windowAnimations = R.style.SlidingDialogAnimation
             alert.show()
             return alert
         }
-
-
     }
 }
 

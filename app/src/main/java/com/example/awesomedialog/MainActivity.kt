@@ -22,18 +22,18 @@ class MainActivity : AppCompatActivity() {
         val goToMyAccount = "Go To My Account"
         val cancel = "Cancel"
         first.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
         }
         second.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)
         }
         third.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
         fourth.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .icon(R.drawable.ic_congrts)
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
         fifth.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .onPositive(goToMyAccount) {
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
         sixth.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(title)
                 .body(body)
                 .onPositive(goToMyAccount) {
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
         seventh.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(
                     title,
                     titleColor = ContextCompat.getColor(this, android.R.color.white)
@@ -83,18 +83,23 @@ class MainActivity : AppCompatActivity() {
                     color = ContextCompat.getColor(this, android.R.color.white)
                 )
                 .background(R.drawable.layout_rounded_green)
-                .onPositive(goToMyAccount, buttonBackgroundColor = R.drawable.layout_rounded_dark_white
-                    , textColor =ContextCompat.getColor(this, android.R.color.black) ) {
+                .onPositive(
+                    goToMyAccount,
+                    buttonBackgroundColor = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
+                ) {
                     Log.d("TAG", "positive ")
                 }
-                .onNegative(cancel, buttonBackgroundColor = R.drawable.layout_rounded_dark_white
-                    , textColor =ContextCompat.getColor(this, android.R.color.black)
+                .onNegative(
+                    cancel,
+                    buttonBackgroundColor = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
                 ) {
                     Log.d("TAG", "negative ")
                 }
         }
         eighth.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(
                     title,
                     titleColor = ContextCompat.getColor(this, android.R.color.white)
@@ -114,7 +119,7 @@ class MainActivity : AppCompatActivity() {
                 }
         }
         nine.setOnClickListener {
-            AwesomeDialog.createDialog(this)
+            AwesomeDialog.build(this)
                 .title(
                     title,
                     titleColor = ContextCompat.getColor(this, android.R.color.white)
