@@ -82,6 +82,11 @@ AwesomeDialog.createDialog(this)
                 .icon(R.drawable.ic_congrts)                
 ```
 
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499149.png" width="250px" />
+
+
+
 ### Icon+Title+Body+ (+ Button)
 ```
    AwesomeDialog.createDialog(this)
@@ -92,6 +97,12 @@ AwesomeDialog.createDialog(this)
                     Log.d("TAG", "positive ")
                 }
 ```
+
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499156.png" width="250px" />
+
+
+
 ### Icon+Title+Body+ (+/- Button)
 ```
 AwesomeDialog.createDialog(this)
@@ -107,6 +118,11 @@ AwesomeDialog.createDialog(this)
         
 ```
 
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499160.png" width="250px" />
+
+
+
 ### Title+Body+ (- Button)
 ```
 AwesomeDialog.createDialog(this)
@@ -116,6 +132,12 @@ AwesomeDialog.createDialog(this)
                     Log.d("TAG", "positive ")
                 }
 ```
+
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499169.png" width="250px" />
+
+
+
 ### Title+Body+ (+/- Button)
 ```
        AwesomeDialog.createDialog(this)
@@ -129,6 +151,10 @@ AwesomeDialog.createDialog(this)
                 }  
 
 ```
+
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499173.png" width="250px" />
+
 
 ### Title+Body+ (+/- Button) With Backgroud 🌈
 ```
@@ -150,6 +176,33 @@ AwesomeDialog.createDialog(this)
                 }
                 
 ```
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597499179.png" width="250px" />
+
+
+### Custom Coloring 🌈
+```
+  AwesomeDialog.createDialog(this)
+                .title(
+                    title,
+                    titleColor = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .body(
+                    body,
+                    color = ContextCompat.getColor(this, android.R.color.white)
+                )
+                .icon(R.drawable.ic_congrts)
+                .background(R.drawable.layout_rounded_green)
+                .onPositive(
+                    goToMyAccount,
+                    color = R.drawable.layout_rounded_dark_white,
+                    textColor = ContextCompat.getColor(this, android.R.color.black)
+                ) {
+                    Log.d("TAG", "positive ")
+                }                
+```
+### Output
+<img src="https://raw.githubusercontent.com/chnouman/awesomedialog/master/art/Screenshot_1597510833.png" width="250px" />
 
 
 ## License
