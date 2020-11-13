@@ -59,7 +59,7 @@
 
         <TextView
             android:id="@+id/yesButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/triple_margin"
             android:layout_marginStart="@dimen/double_margin"
             android:layout_marginTop="@dimen/single_and_half_margin"
@@ -78,7 +78,7 @@
 
         <TextView
             android:id="@+id/noButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/triple_margin"
             android:layout_marginStart="@dimen/double_margin"
             android:layout_marginTop="@dimen/half_margin"

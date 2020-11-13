@@ -130,6 +130,8 @@ fun AlertDialog.icon(
 
 /***
  * onPositive Button Properties For Alert Dialog
+ *
+ * No Need to call dismiss(). It is calling already
  * */
 fun AlertDialog.onPositive(
     text: String,
@@ -154,6 +156,8 @@ fun AlertDialog.onPositive(
 
 /***
  * onNegative Button Properties For Alert Dialog
+ *
+ * No Need to call dismiss(). It is calling already
  * */
 fun AlertDialog.onNegative(
     text: String,
