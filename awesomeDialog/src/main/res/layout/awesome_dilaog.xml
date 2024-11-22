@@ -3,98 +3,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:paddingBottom="@dimen/single_margin">
+    android:background="@android:color/transparent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainLayout"
+    <ScrollView
+        android:id="@+id/scrollLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/single_margin"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/layout_rounded_white"
-        android:padding="@dimen/single_and_half_margin">
+        android:overScrollMode="never"
+        android:layout_alignParentBottom="true">
 
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="51dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="@dimen/single_margin"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_congrts" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/ten_dp"
-            android:text="@string/congratulations"
-            android:textSize="24sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
-
-        <TextView
-            android:id="@+id/subHeading"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/single_and_half_margin"
-            android:layout_marginTop="@dimen/half_margin"
-            android:layout_marginEnd="@dimen/single_and_half_margin"
-            android:gravity="center_horizontal"
-            android:text="@string/success_body"
-            android:textSize="14sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
-
-        <TextView
-            android:id="@+id/yesButton"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/triple_margin"
-            android:layout_marginStart="@dimen/double_margin"
-            android:layout_marginTop="@dimen/single_and_half_margin"
-            android:layout_marginEnd="@dimen/double_margin"
-            android:background="@drawable/layout_rounded_dark_black"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingStart="@dimen/single_margin"
-            android:paddingEnd="@dimen/single_margin"
-            android:text="@string/done"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subHeading" />
-
-        <TextView
-            android:id="@+id/noButton"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/triple_margin"
-            android:layout_marginStart="@dimen/double_margin"
-            android:layout_marginTop="@dimen/half_margin"
-            android:layout_marginEnd="@dimen/double_margin"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/single_margin"
-            android:background="@drawable/layout_rounded_dark_black"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingStart="@dimen/single_margin"
-            android:paddingEnd="@dimen/single_margin"
-            android:text="@string/done"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/yesButton" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginHorizontal="@dimen/single_margin"
+            android:background="@drawable/layout_rounded_white"
+            android:padding="@dimen/single_and_half_margin">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="@dimen/single_margin"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_congrts" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:text="@string/congratulations"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image" />
+
+            <TextView
+                android:id="@+id/subHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/single_and_half_margin"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_marginEnd="@dimen/single_and_half_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/success_body"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/yesButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/triple_margin"
+                android:layout_marginStart="@dimen/double_margin"
+                android:layout_marginTop="@dimen/single_and_half_margin"
+                android:layout_marginEnd="@dimen/double_margin"
+                android:background="@drawable/layout_rounded_dark_black"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="@dimen/single_margin"
+                android:paddingEnd="@dimen/single_margin"
+                android:text="@string/done"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subHeading" />
+
+            <TextView
+                android:id="@+id/noButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/triple_margin"
+                android:layout_marginStart="@dimen/double_margin"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_marginEnd="@dimen/double_margin"
+                android:layout_marginBottom="@dimen/single_margin"
+                android:background="@drawable/layout_rounded_dark_black"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="@dimen/single_margin"
+                android:paddingEnd="@dimen/single_margin"
+                android:text="@string/done"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yesButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

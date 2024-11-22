@@ -82,13 +82,13 @@ fun AlertDialog.background(
 fun AlertDialog.position(
     position: AwesomeDialog.POSITIONS = AwesomeDialog.POSITIONS.BOTTOM
 ): AlertDialog {
-    val layoutParams = mainLayout.layoutParams as RelativeLayout.LayoutParams
+    val layoutParams = scrollLayout.layoutParams as RelativeLayout.LayoutParams
     if (position == AwesomeDialog.POSITIONS.CENTER) {
         layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE)
     } else if (position == AwesomeDialog.POSITIONS.BOTTOM) {
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE)
     }
-    mainLayout!!.layoutParams = layoutParams
+    scrollLayout!!.layoutParams = layoutParams
     return this
 }
 
